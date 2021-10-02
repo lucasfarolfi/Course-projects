@@ -1,0 +1,71 @@
+<%-include("../../partials/head.ejs") %>
+
+<body>
+    <%-include("../../partials/header.ejs") %>
+
+    <br><br>
+
+    <main class="container">
+        <section class="card">
+
+            <article class="card-header">
+                <h2>Artigos</h2>
+                <hr>
+                <a href="/admin/artigos/novo" class="btn btn-success">Criar artigo</a>
+            </article>
+
+            <article class="card-body">
+                
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nome</th>
+                            <th>Slug</th>
+                            <th>Categoria</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <% articles.forEach(article=>{%>
+                            <tr>
+                                <th><%= article.id %></th>
+                                <th><%= article.title %></th>
+                                <th><%= article.slug %></th>
+                                <th><%= article.category.title %></th> <!-- Utilizando Join no sequelize -->
+                                <th>
+                                    <a href="/admin/artigos/editar/<%= article.id %>" class="btn btn-warning">Editar</a>
+                                    <!--Parâmetro 1: evento, Parâmetro 2: form (this)-->
+                                    <form action="/artigos/deletar" method="POST" style="display: inline;" onsubmit="confirmDelete(event, this)">
+                                        <input type="hidden" name="id" value="<%= article.id %>">
+                                        <button class="btn btn-danger">Deletar</button>
+                                    </form>
+                                </th>
+                            </tr>
+                        <% }) %>
+                         
+                    </tbody>
+                </table>
+
+            </article>
+        </section>
+        
+    </main>
+</body>
+
+<%- include("../../partials/foot.ejs") %>
+
+<script>
+    //Função que confirma se a categoria será apagada ou não
+    function confirmDelete(event, form){
+        event.preventDefault() //Método que interrompe o evento
+
+        let decision = confirm("Voce quer mesmo deletar este artigo ?") //Alert que retorna true ou false
+
+        if(decision){
+            form.submit() //O form executa o evento submit e a categoria é deletada
+        }
+    }
+</script>

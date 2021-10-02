@@ -1,0 +1,26 @@
+<%-include("../../partials/head.ejs") %>
+
+<body>
+    <%-include("../../partials/header.ejs") %>
+
+    <br><br>
+
+    <main class="container">
+        <section class="card">
+            <article class="card-header">
+                <h1>Criar categoria</h1>
+            </article>
+
+            <article class="card-body">
+                <form method="POST" action="/categorias/salvar">
+                    
+                    <input type="text" name="title" class="form-control" placeholder="Digite o nome da categoria"><br>
+                    <button class="btn btn-success">Enviar</button>
+                </form>
+            </article>
+        </section>
+        
+    </main>
+</body>
+
+<%-include("../../partials/foot.ejs") %>

@@ -1,0 +1,17 @@
+<%-include("partials/head.ejs") %>
+
+<body>
+    <%-include("header.ejs") %>
+    <br><br>
+
+    <main class="container">
+
+        <section class="card">
+            <div class="card-header"><h1> <%= article.title %></h1></div>
+
+            <div class="card-body"><%- article.body %></div>
+        </section>
+    </main>
+</body>
+
+<%-include("partials/foot.ejs") %>

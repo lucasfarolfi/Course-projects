@@ -1,0 +1,203 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: white url(img/fundo.png) repeat-x;
+}
+ul{
+    list-style: none;
+}
+/*--------------------------Containers do site-----------------------------*/
+#container{
+    border: 1px hidden red;
+    width: 750px;
+    margin: 0 auto;
+}
+#cabeçalho{
+    border: 1px hidden red;
+    background: url(img/detalhe-topo.png) no-repeat top right ;
+    height: 150px;
+    padding-top: 25px;
+}
+#conteudo{
+    margin-top: 60px;
+}
+#container-rodape{
+    background-color: #294c71;
+}
+/*--------------------------Logo e menu horizontal------------------------------------*/
+#logo{
+    background: url(img/logo.png) top left;
+    width: 152px;
+    height: 66px;
+    text-indent: -3000px;
+}
+#cabeçalho ul{ 
+    border: 1px hidden blue;
+    background: #b10333;
+    margin-top: 20px;
+    float: left;
+}
+#cabeçalho ul li{
+    float: left;
+    display: block;
+}
+#cabeçalho ul a{
+    background: url(img/divisor.png) no-repeat left center;
+    color: white;
+    font-size: 0.9em;
+    padding: 0.5em 1.5em;
+    line-height: 2.1em;
+    text-decoration: none;
+}
+#cabeçalho ul .divisoria a{
+    background: none;
+}
+#cabeçalho a:hover{
+    color: #69001d;
+}
+body.home #navegação a#aba,
+body.brasil #navegação a#aba,
+body.fotos #navegação a#aba{
+    background-color: #de003e;
+    color: white;
+    cursor: text;
+}
+/*--------------------------Formatação Conteudo----------------------------*/
+.caixa-conteudo{
+    background: url(img/fundo-caixa.png);
+    margin: 10px 0;
+    padding: 5px;
+}
+.caixa-conteudo h2{
+    background-color:#294c71;
+    color: white;
+    font-size: 1em;
+    padding: 5px;
+}
+.caixa-branca{
+    background: white;
+    margin-top: 5px;
+    padding: 5px;
+}
+/*--------------------------Conteudo------------------------------------*/
+#primario_1coluna,
+#secundario_1coluna{
+    width: 720px;
+}
+#primario{
+    width: 270px;
+    margin: 0 0 20px 195px;
+    float: left;
+}
+#secundario{
+    width: 270px;
+    margin: 0 0 20px 15px;
+    float: left;
+}
+
+#lateral{
+    width: 180px;
+    margin: 0 0 20px -750px;
+    float: left;
+}
+/*--------------------------Barra lateral------------------------------------*/
+#lateral ul a{
+    color: black;
+    font-size: 0.9em;
+    padding:3px;
+    line-height: 30px;
+    text-decoration:none ;
+    border-bottom: 1px solid #fafafa;
+}
+#lateral a:hover{
+    color: #a1a1a1;
+    padding-left: 20px;
+    background: url(img/marcador.png) no-repeat left center;
+}
+#lateral form{
+    padding-left: 0;
+}
+#lateral label{
+    display: block;
+    cursor: pointer;
+}
+#lateral input{
+    padding: 5px;
+    font-size: 0.9em;
+    width: 125px;
+}
+#lateral .submit{
+    border: 2px solid #870529;
+    background-color: #b10333;
+    color: white;
+    width: 80px;
+    padding: 5px;
+}
+/*--------------------------Conteúdo primário------------------------------------*/
+#ultima-entrevista h3{
+    background-color: #de003e;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    display: inline;
+    padding: 3px;
+}
+#ultima-entrevista img{
+    width: 98%;
+}
+#ultima-entrevista a{
+    color: #de003e;
+}
+/*--------------------------Conteúdo Secundário------------------------------------*/
+#destaque h3{
+    background-color: #b10333;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    display: inline;
+    padding: 3px;
+}
+#destaque img{
+    width: 98%;
+}
+#destaque a{
+    color: #de003e;
+}
+/*-------------------------- Mundo e Notícias recentes ------------------------------------*/
+.mundo_noticias-recentes ul a{
+    text-decoration: none;
+}
+.mundo_noticias-recentes li{
+   border-bottom: 1px solid #ccc; 
+   padding: 2px;
+   height: 62px;
+}
+.mundo_noticias-recentes li:hover {
+    background: #ccc;
+    cursor: pointer;
+}
+.mundo_noticias-recentes li a img{
+    width: 80px;
+    padding-right: 5px;
+    margin: 5px;
+    float: left;
+}
+.mundo_noticias-recentes h5{
+    color: #3e7ab9;
+    font-size: 0.7em;
+    padding: 3px;
+    text-transform: uppercase;
+}
+.mundo_noticias-recentes li a p{
+    color: black;
+    font-size: 0.8em;
+}
+
+/*--------------------------Rodapé------------------------------------*/
+#rodape{
+    color: white;
+    width: 750px;
+    margin: 0 auto;
+    padding: 5px;
+}

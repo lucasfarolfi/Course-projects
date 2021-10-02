@@ -1,0 +1,10 @@
+body{
+    background-color: #EEE;
+}
+a, a:hover{
+    color: white;
+    text-decoration: none;
+}
+#formulario-perguntar{
+    margin-top: 30px;
+}

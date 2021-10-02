@@ -1,0 +1,67 @@
+<%-include("../../partials/head.ejs") %>
+
+<body>
+    <%-include("../../partials/header.ejs") %>
+
+    <br><br>
+
+    <main class="container">
+        <section class="card">
+
+            <article class="card-header">
+                <h2>Usuários</h2>
+                <hr>
+                <a href="/admin/usuarios/cadastrar" class="btn btn-success">Cadastrar usuário</a>
+            </article>
+
+            <article class="card-body">
+                
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Email</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <% users.forEach(user=>{%>
+                            <tr>
+                                <th><%= user.id %></th>
+                                <th><%= user.email %></th>
+                                <th>
+                                    <a href="/admin/usuarios/editar/<%= user.id %>" class="btn btn-warning">Editar</a>
+                                    <!--Parâmetro 1: evento, Parâmetro 2: form (this)-->
+                                    <form action="/usuarios/deletar" method="POST" style="display: inline;" onsubmit="confirmDelete(event, this)">
+                                        <input type="hidden" name="id" value="<%= user.id %>">
+                                        <button class="btn btn-danger">Deletar</button>
+                                    </form>
+                                </th>
+                            </tr>
+                        <% }) %>
+                         
+                    </tbody>
+                </table>
+
+            </article>
+        </section>
+        
+    </main>
+</body>
+
+<%- include("../../partials/foot.ejs") %>
+
+<script>
+    //Função que confirma se a categoria será apagada ou não
+    function confirmDelete(event, form){
+        event.preventDefault() //Método que interrompe o evento
+
+        let decision = confirm("Voce quer mesmo deletar esta categoria ?") //Alert que retorna true ou false
+
+        if(decision){
+            form.submit() //O form executa o evento submit e a categoria é deletada
+        }
+    }
+</script>

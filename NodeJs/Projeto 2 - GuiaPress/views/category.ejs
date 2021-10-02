@@ -1,0 +1,26 @@
+<%-include("partials/head.ejs") %>
+
+<body>
+    <%-include("header.ejs") %>
+    <br><br>
+
+    <main class="container">
+
+        <div class="jumbotron bg-light p-5">
+            <h1 class="display-4"><%= category.title %></h1>
+        </div>
+        <br><br>
+            <% articles.forEach(article=>{ %>
+                <section class="card">
+                <div class="card-header"><h1> <%= article.title %></h1></div>
+
+                <div class="card-body"><a href="/artigos/<%= article.slug %>" class="btn btn-success">Ler artigo</a></div>
+            </section>
+
+            <br>
+        <% }) %>
+        
+    </main>
+</body>
+
+<%-include("partials/foot.ejs") %>

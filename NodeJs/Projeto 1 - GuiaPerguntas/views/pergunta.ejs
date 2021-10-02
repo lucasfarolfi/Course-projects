@@ -1,0 +1,48 @@
+<!-- Head -->
+<%-include("partials/head.ejs") %>
+
+<body>
+    <!-- Nav -->
+    <%-include("partials/nav.ejs") %>
+
+    <section class="container">
+        <br><h1>Pergunta</h1><br>
+
+        <div class="card">
+            <div class="card-header">
+                <h1><%= pergunta.titulo %></h1>
+            </div>
+
+            <div class="card-body">
+                <p><%= pergunta.descricao %></p>
+            </div>
+
+            <div class="card-footer">
+                <form method="POST" action="/resposta">
+                    <h2>Responda</h2>
+                    <label>Resposta:</label>
+                    <textarea class="form-control" name="corpo"></textarea><br>
+                    <input type="hidden" name="pergunta" value="<%= pergunta.id %>"> <!--Captura o id da pergunta-->
+                    <button type="submit" class="btn btn-primary">Responder</button>
+                </form>
+            </div>
+        </div>
+        
+        <br><h1>Respostas</h1><br>
+
+        <% resposta.forEach((resposta)=>{ %>
+            <div class="card">
+                <div class="card-body">
+                    <p><%= resposta.texto %></p>
+                </div>
+            </div>
+            <br>
+        <% }) %>
+
+    </section>
+</body>
+
+<!-- Javascript Bootstrap foot -->
+<%-include("partials/foot.ejs") %>
+
+</html>

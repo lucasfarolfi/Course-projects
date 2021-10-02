@@ -1,0 +1,98 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	font:16px "Trebuchet MS", Helvetica, Sans-Serif;
+	background: lightgrey;
+}
+a{
+	text-decoration: none;
+}
+h1{
+	font-size: 2.5em;
+	color: #9147FF;
+}
+h3{
+	padding: 10px 0;
+	color: #666666;
+	background: lightgrey;
+}
+h6{
+	padding-bottom: 20px;
+}
+/*area do cabeçalho---------------------------------------------------------------*/
+#cabeçalho{
+	padding: 7px;
+	background: #9147FF;
+	text-align: center;
+}
+/* area do logo*/
+#logocolor{
+	color: #262626;
+}
+#logo, #menu{
+	margin: 16px;
+}
+/*area do menu*/	
+#menu a:link,  a:visited{
+	font-weight: bold;
+	color: white;
+	padding: 6px 12px;
+	margin: 0 4px;
+	border: 1px hidden;
+	border-radius: 12px;
+}
+#menu a:hover{
+	background: white;
+	color: #9147FF;
+	
+}
+/*area do conteudo------------------------------------------------------------------*/
+#conteudo{
+	width: 920px;
+	background: 5px solid red;
+	margin: 10px auto;
+	border: 1px hidden;
+}
+/*-----------area das postagens*/
+#areapost{
+	width: 660px;
+	float: left;
+}
+.post{
+	background: white;
+	padding: 20px;
+	margin: 12px 0;
+	border: 1px hidden;
+
+}
+
+/*-----------area do conteudo a direita*/
+#arealateral{
+	width: 240px;
+	float: right;
+	margin: 12px 0;
+	border: 1px hidden;
+}
+.conteudolateral{
+	background: white;
+	border: 1px hidden;
+	padding: 9px;
+	margin-bottom: 20px;
+}
+.conteudolateral a, .post a{
+	color: #9147FF;
+}
+
+/*area do rodapé---------------------------------------------------------------------*/
+
+
+
+#rodape{
+	clear: both;
+	background: grey;
+	text-align: center;
+	font-weight: bold;
+	padding: 12px;
+}
