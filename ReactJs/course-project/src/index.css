@@ -1,0 +1,15 @@
+/* Css Rule para criar uma fonte para a aplicaçãos */
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("./assets/fonts/LexendDeca.ttf");
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", "Arial", sans-serif;
+}
+*:focus{
+  outline: none;
+}

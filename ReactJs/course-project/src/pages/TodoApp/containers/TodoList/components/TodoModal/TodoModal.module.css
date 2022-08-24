@@ -1,0 +1,77 @@
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 1;
+    opacity: 0.5;
+}
+.modal{
+    width: 800px;
+    height: 200px;
+    position: fixed;
+    top: calc(50vh - 100px);
+    left: calc(50vw - 400px);
+    border-radius: 10px;
+    background-color: #4834d4;
+    z-index: 2;
+}
+.modal form{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+}
+.modal input{
+    color: #4834d4;
+    opacity: 0.5;
+    width: 420px;
+    height: 30px;
+    border: none;
+    padding-left: 30px;
+    border-radius: 10px;
+    background-color: #dff9fb;
+}
+.error{
+    color: #dff9fb;
+    font-size: 14px;
+    justify-self: center;
+}
+.submitBtn{
+    width: 180px;
+    height: 30px;
+    border: none;
+    justify-self: center;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #211861;
+    background-color: #8a7de3;
+    cursor: pointer;
+}
+.submitBtn:disabled{
+    opacity: 0.5;
+}
+.closeModalBtn{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: #dff9fb;
+    cursor: pointer;
+    z-index: 3;
+}
+.closeModalBtn svg{
+    width: 50%;
+    height: 50%;
+}
+.closeModalBtn svg path{
+    fill: #4834d4;
+}

@@ -1,0 +1,65 @@
+.item{
+    width: 540px;
+    height: 30px;
+    border: 2px solid #8a7de3;
+    border-radius: 10px;
+    padding: 0 10px;
+    display: grid;
+    justify-content: space-between;
+    align-content: center;
+    grid-auto-flow: column; /* Controls flex direction */
+}
+.completed{
+    text-decoration: line-through;
+}
+.controlButtons {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-content: center;
+    gap: 5px;
+}
+.controlButtons button {
+    border: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #4834d4;
+}
+.controlButtons button svg {
+    width: 50%;
+    height: 50%;
+}
+.controlButtons button svg path {
+    fill: #eeecfb; /* Change color of svg */
+}
+.controlButtons input[type="checkbox"] {
+    appearance: none; /* Remove default appearence of checkbox */
+    width: 40px;
+    height: 20px;
+    background-color: #eeecfb;
+    border-radius: 10px;
+    box-shadow: inset 0 0 4px 2px #aba2eb;
+    cursor: pointer;
+    position: relative;
+}
+.controlButtons input[type="checkbox"]::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #4834d4;
+    box-shadow: inset 0 0 4px 2px #2e2287;
+    transition: all .2s;
+}
+.controlButtons input[type="checkbox"]:checked{
+    background-color: #8a7de3;
+    box-shadow: inset 0 0 4px 2px #4834d4;
+}
+.controlButtons input[type="checkbox"]:checked::before{
+    left: 20px; /* Move the button 20px to right */
+}
